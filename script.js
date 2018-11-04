@@ -16,8 +16,6 @@ const circle1Button = $('#circle-1-text button');
 
 animBtn.on('click', () => {
 
-	mainSection.addClass('expanded');
-
 	$('.section-border').css('display', 'block');
 
 	TweenMax.to(circle2, 1, { y: ($('#circle-2-pos').offset().top - circle2.offset().top) - circle2.height() / 2 });
@@ -37,7 +35,7 @@ function animateIntroText() {
 }
 
 function animateCircle1Text() {
-
+	//circle 1 animation
 	TweenMax.set('#circle-1-text', { x: '0%' });
 	TweenMax.to(circle1tH2, .7, { x: '0%' });
 	TweenMax.to(circle1P, .7, { x: '0%' });
@@ -50,17 +48,24 @@ function animateCircle1Text() {
 function testF() {
 	const controller = new ScrollMagic.Controller();
 
+	//circle 2 animation
+	// const circle2TimeLine = new TimelineMax()
+	// 	.to('#circle-2-text', .7, { opacity: 1 })
+	// 	.to('#circle-2-border', .7, { width: '100%' }, "-=.7");
 	const circle2TimeLine = new TimelineMax()
-		.to('#circle-2-text', .7, { opacity: 1 })
+		.to('#circle-2-text h2', .7, { x: '0%' })
+		.to('#circle-2-text p', .7, { x: '0%'  }, "-=.7")
+		.to('#circle-2-text button', .7, { x: '0%'  }, "-=.7")
 		.to('#circle-2-border', .7, { width: '100%' }, "-=.7");
 
 	let circle2Scene = new ScrollMagic.Scene({
 		triggerElement: '#circle-2-section'
 	})
 		.setTween(circle2TimeLine)
-		.addIndicators({ name: "circle-2" })
+		// .addIndicators({ name: "circle-2" })
 		.addTo(controller);
 
+	//circle 3 animation
 	const circle3Timeline = new TimelineMax()
 		.to('#circle-3-text', .7, { opacity: 1 })
 		.to('#circle-3-border', .7, { width: '100%' }, "-=.7");
@@ -69,9 +74,10 @@ function testF() {
 		triggerElement: '#circle-3-section'
 	})
 		.setTween(circle3Timeline)
-		.addIndicators({ name: "circle-3" })
+		// .addIndicators({ name: "circle-3" })
 		.addTo(controller);
 
+	//circle 4 animation
 	const circle4Timeline = new TimelineMax()
 		.to('#circle-4-text', .7, { opacity: 1 });
 		// .to('#circle-3-border', .7, { width: '100%' }, "-=.7");
@@ -80,6 +86,6 @@ function testF() {
 		triggerElement: '#circle-4-section'
 	})
 		.setTween(circle4Timeline)
-		.addIndicators({ name: "circle-4" })
+		// .addIndicators({ name: "circle-4" })
 		.addTo(controller);
 }

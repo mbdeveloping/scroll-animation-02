@@ -242,6 +242,11 @@ footer p {
     overflow: hidden;
 }
 
-#circle-2-text, #circle-3-text, #circle-4-text {
+ #circle-3-text, #circle-4-text {
     opacity: 0;
+}
+
+#circle-2-text h2, #circle-2-text p, #circle-2-text button {
+    will-change: transform;
+    transform: translateX(120%);
 }

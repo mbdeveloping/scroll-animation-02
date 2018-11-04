@@ -90,9 +90,9 @@
 
                     <div class="col-md-6">
                         <div id="circle-2-text" class="circle-text text-wrapper">
-                            <h2>COMPETITIVE PRODUCT PFFERING</h2>
+                            <div class="h2-wrapper"><h2>COMPETITIVE PRODUCT PFFERING</h2></div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum a quibusdam esse itaque commodi ratione vero voluptates, delectus minima debitis eveniet suscipit. Est quas modi iste maiores quasi, saepe possimus quidem nulla officiis blanditiis quos repellendus voluptatum. Nobis blanditiis quam aut, impedit voluptas nam a odit quo ducimus sit, quia unde voluptatibus aliquam quibusdam nemo alias excepturi consectetur mollitia? Nostrum nihil beatae, debitis animi magnam, maxime aperiam porro, odio voluptas sapiente voluptatibus minus laudantium vel! Commodi reprehenderit corrupti cupiditate placeat natus ipsam ut eum blanditiis fugit est. Modi saepe eos maiores quam, quaerat doloremque quis reprehenderit blanditiis repellendus commodi tempora!</p>
-                            <button class="btn btn-primary">Read More</button>
+                            <div class="btn-wrapper"><button class="btn btn-primary">Read More</button></div>
                         </div>
                     </div>
 
